@@ -1,17 +1,18 @@
 ---
 title: "Deploying Machine Learning Models to the Cloud"
-cover: "https://unsplash.it/1280/500/?random?BoldMage"
+cover: "https://www.hikepyrenees.co.uk/wp-content/uploads/Lakes-Valleys-iris-slider-min.jpg"
 author: "ben"
 date: "2018-12-07"
 category: "tech"
 tags:
     - data science
     - docker
+    - cloud
 ---
 
 ## The Dataset
 
-The dataset is the infamous iris dataset.
+I started with the iris dataset to make things easy to get up and going. Here are some examples of the data that is included in the data set.
 
 | Sepal Length | Sepal Width  | Petal Length  | Petal Width | Species |
 |---- | --- | --- | --- | --------------- |
@@ -19,7 +20,8 @@ The dataset is the infamous iris dataset.
 | 7.0 | 3.2 | 4.7 | 1.4 | Iris-versicolor |
 | 6.3 | 3.3 | 6.0 | 2.5 | Iris-virginica  |
 
-![Iris Dataset](https://deeplearning.cms.waikato.ac.nz/img/iris.png)
+<!-- ![Iris Dataset](https://deeplearning.cms.waikato.ac.nz/img/iris.png) -->
+<img src="https://deeplearning.cms.waikato.ac.nz/img/iris.png" alt="Iris Dataset" style="max-width:710px;"/>
 
 It consists of three species of flowers. Each flower has its own sepals and petals with a length and width.
 

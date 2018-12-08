@@ -3,13 +3,13 @@ module.exports = {
   blogAuthorDir: "authors", // The name of directory that contains your 'authors' folder.
   blogAuthorId: "ben", // The default and fallback author ID used for blog posts without a defined author.
   siteTitle: "Ben Basinski", // Site title.
-  siteTitleAlt: "Ben Basinski Blog", // Alternative site title for SEO.
+  siteTitleAlt: "Ben Basinski's Blog", // Alternative site title for SEO.
   siteLogo:
     "/logos/logo-1024.png", // Logo used for SEO and manifest. e.g. "/logos/logo-1024.png",
   siteUrl: "https://benbasinski.me", // Domain of your website without pathPrefix.
   // pathPrefix: "/", // Prefixes all links. For cases when deployed to example.github.io/gatsby-starter-casper/.
   siteDescription:
-    "A site to share some thoughts about my experiences.", // Website description used for RSS feeds/meta description tag.
+    "A site to share some code and some of my experiences in tech.", // Website description used for RSS feeds/meta description tag.
   siteCover:
     "https://haysclark.github.io/gatsby-starter-casper/images/blog-cover.jpg", // Optional, the cover image used in header for home page. e.g: "/images/blog-cover.jpg",
   siteNavigation: true, // If navigation is enabled the Menu button will be visible
@@ -20,9 +20,9 @@ module.exports = {
   googleAnalyticsID: "UA-130594870-1", // GA tracking ID.
   // disqusShortname: "https-vagr9k-github-io-gatsby-advanced-starter", // enables Disqus comments, visually deviates from original Casper theme.
   siteSocialUrls: [
-    "https://github.com/haysclark/gatsby-starter-casper",
-    "https://twitter.com/gatsbyjs",
-    "mailto:gatsbyjs@example.com"
+    "https://github.com/bbasinsk",
+    "https://twitter.com/benbasinski",
+    "mailto:benbasinski97@gmail.com"
   ],
   postDefaultCategoryID: "Tech", // Default category for posts.
   // Links to social profiles/projects you want to display in the navigation bar.
