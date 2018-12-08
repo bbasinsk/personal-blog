@@ -10,8 +10,7 @@ module.exports = {
   // pathPrefix: "/", // Prefixes all links. For cases when deployed to example.github.io/gatsby-starter-casper/.
   siteDescription:
     "A site to share some code and some of my experiences in tech.", // Website description used for RSS feeds/meta description tag.
-  siteCover:
-    "https://haysclark.github.io/gatsby-starter-casper/images/blog-cover.jpg", // Optional, the cover image used in header for home page. e.g: "/images/blog-cover.jpg",
+  siteCover: "/images/blog-cover.jpg", // Optional, the cover image used in header for home page.
   siteNavigation: true, // If navigation is enabled the Menu button will be visible
   siteRss: "/rss.xml", // Path to the RSS file.
   siteRssAuthor: "Ben Basinski", // The author name used in the RSS file

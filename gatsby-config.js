@@ -41,7 +41,7 @@ module.exports = {
           {
             resolve: "gatsby-remark-images",
             options: {
-              maxWidth: 710
+              // maxWidth: 710,
             }
           },
           {
@@ -49,7 +49,7 @@ module.exports = {
           },
           "gatsby-remark-prismjs",
           "gatsby-remark-copy-linked-files",
-          "gatsby-remark-autolink-headers"
+          "gatsby-remark-autolink-headers",
         ]
       }
     },
@@ -100,7 +100,7 @@ module.exports = {
         setup(ref) {
           const ret = ref.query.site.siteMetadata.rssMetadata;
           ret.allMarkdownRemark = ref.query.allMarkdownRemark;
-          ret.generator = "GatsbyJS Casper Starter";
+          ret.generator = "Ben Basinski's Blog";
           return ret;
         },
         query: `

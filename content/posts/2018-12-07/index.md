@@ -10,6 +10,10 @@ tags:
     - cloud
 ---
 
+# Dockerizing a Scikit-Learn Model with Flask
+
+I wanted to get some content on this blog, so here's a tutorial on how to deploy a Scikit-learn model to the cloud. This allows us to use the model with web site such as React or a mobile app!
+
 ## The Dataset
 
 I started with the iris dataset to make things easy to get up and going. Here are some examples of the data that is included in the data set.
@@ -20,14 +24,14 @@ I started with the iris dataset to make things easy to get up and going. Here ar
 | 7.0 | 3.2 | 4.7 | 1.4 | Iris-versicolor |
 | 6.3 | 3.3 | 6.0 | 2.5 | Iris-virginica  |
 
-<!-- ![Iris Dataset](https://deeplearning.cms.waikato.ac.nz/img/iris.png) -->
-<img src="https://deeplearning.cms.waikato.ac.nz/img/iris.png" alt="Iris Dataset" style="max-width:710px;"/>
+![Iris Dataset](./iris.png)
+<!-- <img src="https://deeplearning.cms.waikato.ac.nz/img/iris.png" alt="Iris Dataset" style="max-width:710px;"/> -->
 
 It consists of three species of flowers. Each flower has its own sepals and petals with a length and width.
 
 ![Iris sepal and petal](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQM3aH4Q3AplfE1MR3ROAp9Ok35fafmNT59ddXkdEvNdMkT8X6E)
 
-## Creating the Model
+## Creating the Modela
 
 We're going to be creating a fairly simple classifier.
 
@@ -147,10 +151,30 @@ CMD ["server.py"]
 While in the directory of your server and Dockerfile, type
 
 ```{bash}
-docker build -t my-model .
-                 ^       ^
-    container name      location of Dockerfile
+docker build -t my-name/my-model .
+                    ^            ^
+        container name      location of Dockerfile
 ```
+
+You can then push that docker container up to docker hub by typing
+
+```{bash}
+docker push my-name/my-model
+```
+
+Then pull the container down on your server (such as AWS, Digital Ocean, or GCP)
+
+```{bash}
+docker pull my-name/my-model
+```
+
+Then start the server on that machine!
+
+```{bash}
+docker run -d -p 5000:5000 --restart unless-stopped my-name/my-model
+```
+
+You can then request your site by calling a POST request at `{host}:5000/predict` or just by running on your local machine at `localhost:5000/predict`. I would recommend using Postman with application/json as the request body type. Below are some examples of requests that can be sent and their corresponding predictions!
 
 ### Request examples
 
