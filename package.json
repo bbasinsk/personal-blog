@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "author": "Ben Basinski <benbasinski97@gmail.com>",
   "dependencies": {
+    "@material-ui/core": "^3.6.1",
     "babel-eslint": "^10.0.1",
     "classnames": "^2.2.6",
     "gatsby": "^2.0.20",
