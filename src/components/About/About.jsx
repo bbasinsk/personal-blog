@@ -1,68 +1,19 @@
 import React, { Component } from "react";
-import { withStyles } from '@material-ui/core/styles';
-import TextField from '@material-ui/core/TextField';
+import Contact from '../Contact/Contact';
 
 import "./About.css";
 
-const styles = theme => ({
-  container: {
-    display: 'flex',
-    flexWrap: 'wrap',
-  },
-  textField: {
-    marginLeft: theme.spacing.unit,
-    marginRight: theme.spacing.unit,
-  },
-  dense: {
-    marginTop: 16,
-  },
-  menu: {
-    width: 200,
-  },
-});
-
 class About extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      name: ''
-    }
-  }
-
-  handleChange = name => event => {
-    this.setState({
-      [name]: event.target.value,
-    });
-  };
-
   render() {
-    const { classes } = this.props;
-
     return (
       <div className="about">
         <h1>
           Use the form below to get in contact!
         </h1>
-        <form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
-          <p class="hidden">
-            <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
-          </p>
-          <p>
-            <label>Name: <input type="text" name="name" /></label>
-          </p>
-          <p>
-            <label>Email: <input type="text" name="email" /></label>
-          </p>
-          <p>
-            <label>Message: <textarea name="message"></textarea></label>
-          </p>
-          <p>
-            <button type="submit">Send</button>
-          </p>
-        </form>
+        <Contact />
       </div >
     );
   }
 }
 
-export default withStyles(styles)(About)
+export default About;
