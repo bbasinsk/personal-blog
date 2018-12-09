@@ -43,25 +43,24 @@ class About extends Component {
         <h1>
           Use the form below to get in contact!
         </h1>
-        <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field" action="/">
-          <input type="hidden" name="bot-field" />
-          <div className="field half first">
-            <label htmlFor="name">Name</label>
-            <input type="text" name="name" id="name" />
-          </div>
-          <div className="field half">
-            <label htmlFor="email">Email</label>
-            <input type="text" name="email" id="email" />
-          </div>
-          <div className="field">
-            <label htmlFor="message">Message</label>
-            <textarea name="message" id="message" rows="6"></textarea>
-          </div>
-          <ul className="actions">
-            <input type="submit" value="Send Message" className="special" />
-          </ul>
+        <form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
+          <p class="hidden">
+            <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+          </p>
+          <p>
+            <label>Name: <input type="text" name="name" /></label>
+          </p>
+          <p>
+            <label>Email: <input type="text" name="email" /></label>
+          </p>
+          <p>
+            <label>Message: <textarea name="message"></textarea></label>
+          </p>
+          <p>
+            <button type="submit">Send</button>
+          </p>
         </form>
-      </div>
+      </div >
     );
   }
 }
