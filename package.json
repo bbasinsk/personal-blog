@@ -1,8 +1,8 @@
 {
   "name": "benbasinski-blog",
-  "description": "GatsbyJS starter that themed with the Casper theme from Ghost.",
-  "version": "1.0.7",
-  "author": "Hays Clark <hays.clark@gmail.com>",
+  "description": "Personal Blog for Ben Basinski.",
+  "version": "1.0.0",
+  "author": "Ben Basinski <benbasinski97@gmail.com>",
   "dependencies": {
     "babel-eslint": "^10.0.1",
     "classnames": "^2.2.6",

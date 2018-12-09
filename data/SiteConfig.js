@@ -10,7 +10,7 @@ module.exports = {
   // pathPrefix: "/", // Prefixes all links. For cases when deployed to example.github.io/gatsby-starter-casper/.
   siteDescription:
     "A site to share some code and some of my experiences in tech.", // Website description used for RSS feeds/meta description tag.
-  siteCover: "/images/blog-cover.jpg", // Optional, the cover image used in header for home page.
+  siteCover: "/images/blog-cover-bike.jpg", // Optional, the cover image used in header for home page.
   siteNavigation: true, // If navigation is enabled the Menu button will be visible
   siteRss: "/rss.xml", // Path to the RSS file.
   siteRssAuthor: "Ben Basinski", // The author name used in the RSS file
@@ -20,7 +20,7 @@ module.exports = {
   // disqusShortname: "https-vagr9k-github-io-gatsby-advanced-starter", // enables Disqus comments, visually deviates from original Casper theme.
   siteSocialUrls: [
     "https://github.com/bbasinsk",
-    "https://twitter.com/benbasinski",
+    "https://www.linkedin.com/in/ben-basinski/",
     "mailto:benbasinski97@gmail.com"
   ],
   postDefaultCategoryID: "Tech", // Default category for posts.
@@ -32,9 +32,9 @@ module.exports = {
       iconClassName: "fa fa-github" // Disabled, see Navigation.jsx
     },
     {
-      label: "Twitter",
-      url: "https://twitter.com/benbasinski",
-      iconClassName: "fa fa-twitter" // Disabled, see Navigation.jsx
+      label: "LinkedIn",
+      url: "https://www.linkedin.com/in/ben-basinski/",
+      iconClassName: "fa fa-linkedin" // Disabled, see Navigation.jsx
     },
     {
       label: "Email",
