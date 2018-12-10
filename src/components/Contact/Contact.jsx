@@ -1,5 +1,5 @@
 import React from "react";
-import { navigateTo } from "gatsby-link";
+import { navigate } from "gatsby-link";
 
 function encode(data) {
     return Object.keys(data)
@@ -28,7 +28,7 @@ export default class Contact extends React.Component {
                 ...this.state
             })
         })
-            .then(() => navigateTo(form.getAttribute("action")))
+            .then(() => navigate(form.getAttribute("action")))
             .catch(error => alert(error));
     };
 

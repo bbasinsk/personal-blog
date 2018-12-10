@@ -16,7 +16,7 @@ function GetNavList(config) {
 
   if (config.userLinks) {
     config.userLinks.forEach(link => {
-      NavList.push({
+      NavList.navigate({
         primaryText: link.label,
         // LeftIcon: <FontIcon forceSize iconClassName={link.iconClassName} />,
         component: "a",
@@ -25,9 +25,9 @@ function GetNavList(config) {
     });
   }
 
-  NavList.push({ divider: true });
+  NavList.navigate({ divider: true });
 
-  // NavList.push({
+  // NavList.navigate({
   //   primaryText: "About",
   //   // LeftIcon: <FontIcon>person</FontIcon>,
   //   component: Link,
