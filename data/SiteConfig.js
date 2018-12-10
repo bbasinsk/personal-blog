@@ -9,7 +9,7 @@ module.exports = {
   siteUrl: "https://benbasinski.me", // Domain of your website without pathPrefix.
   // pathPrefix: "/", // Prefixes all links. For cases when deployed to example.github.io/gatsby-starter-casper/.
   siteDescription:
-    "A site to share some code and some of my experiences in tech.", // Website description used for RSS feeds/meta description tag.
+    "A site to share some of my experiences in tech.", // Website description used for RSS feeds/meta description tag.
   siteCover: "/images/blog-cover-bike.jpg", // Optional, the cover image used in header for home page.
   siteNavigation: true, // If navigation is enabled the Menu button will be visible
   siteRss: "/rss.xml", // Path to the RSS file.

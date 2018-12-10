@@ -1,5 +1,5 @@
 ---
-title: "Deploying Machine Learning Models to the Cloud"
+title: "Tutorial: Deploying Machine Learning Models to the Cloud"
 cover: "https://www.hikepyrenees.co.uk/wp-content/uploads/Lakes-Valleys-iris-slider-min.jpg"
 author: "ben"
 date: "2018-12-07"

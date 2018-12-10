@@ -1,5 +1,5 @@
 ---
-title: "Let's Talk About Documentation"
+title: "Rant: Let's Talk About Documentation"
 cover: "https://spin.atomicobject.com/wp-content/uploads/code-as-documentation.jpg"
 author: "ben"
 date: "2018-12-08"
