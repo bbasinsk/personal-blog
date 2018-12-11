@@ -1,79 +1,74 @@
-import React, { Component } from "react";
-import { withStyles } from '@material-ui/core/styles';
-import TextField from '@material-ui/core/TextField';
+import React from "react";
+import { navigateTo } from "gatsby-link";
 
-import "./About.css";
+function encode(data) {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+}
 
-const styles = theme => ({
-  container: {
-    display: 'flex',
-    flexWrap: 'wrap',
-  },
-  textField: {
-    marginLeft: theme.spacing.unit,
-    marginRight: theme.spacing.unit,
-  },
-  dense: {
-    marginTop: 16,
-  },
-  menu: {
-    width: 200,
-  },
-});
-
-class About extends Component {
+export default class About extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      name: ''
-    }
+    this.state = {};
   }
 
-  handleChange = name => event => {
-    this.setState({
-      [name]: event.target.value,
-    });
+  handleChange = e => {
+    this.setState({ [e.target.name]: e.target.value });
+  };
+
+  handleSubmit = e => {
+    e.preventDefault();
+    const form = e.target;
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({
+        "form-name": form.getAttribute("name"),
+        ...this.state
+      })
+    })
+      .then(() => navigateTo(form.getAttribute("action")))
+      .catch(error => alert(error));
   };
 
   render() {
-    const { classes } = this.props;
-
     return (
-      <div className="about">
-        <h1>
-          Use the form below to get in contact!
-        </h1>
-        {/* <form
-          className={classes.container}
-          noValidate
-          autoComplete="off"
+      <div>
+        <h1>Contact</h1>
+        <form
+          name="contact"
+          method="post"
+          action="/"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+          onSubmit={this.handleSubmit}
         >
-          <TextField
-            id="outlined-name"
-            label="Name"
-            className={classes.textField}
-            value={this.state.name}
-            onChange={this.handleChange('name')}
-            margin="normal"
-            variant="outlined"
-          />
-        </form> */}
-
-        <form name="contact" method="POST" netlify action="/">
-          <p>
-            <label>Your Name: <input type="text" name="name" /></label>
+          {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
+          <input type="hidden" name="form-name" value="contact" />
+          <p hidden>
+            <label>
+              Don’t fill this out:{" "}
+              <input name="bot-field" onChange={this.handleChange} />
+            </label>
           </p>
           <p>
-            <label>Your Email: <input type="email" name="email" /></label>
+            <label>
+              Your name:<br />
+              <input type="text" name="name" onChange={this.handleChange} />
+            </label>
           </p>
-          {/* <p>
-            <label>Your Role: <select name="role[]" multiple>
-              <option value="leader">Leader</option>
-              <option value="follower">Follower</option>
-            </select></label>
-          </p> */}
           <p>
-            <label>Message: <textarea name="message"></textarea></label>
+            <label>
+              Your email:<br />
+              <input type="email" name="email" onChange={this.handleChange} />
+            </label>
+          </p>
+          <p>
+            <label>
+              Message:<br />
+              <textarea name="message" onChange={this.handleChange} />
+            </label>
           </p>
           <p>
             <button type="submit">Send</button>
@@ -83,5 +78,3 @@ class About extends Component {
     );
   }
 }
-
-export default withStyles(styles)(About)
