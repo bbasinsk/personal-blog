@@ -20,7 +20,7 @@ export default class Contact extends React.Component {
     handleSubmit = e => {
         e.preventDefault();
         const form = e.target;
-        fetch("/", {
+        fetch("/contact?no-cache=1", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
             body: encode({
@@ -38,7 +38,7 @@ export default class Contact extends React.Component {
                 <form
                     name="contact"
                     method="post"
-                    // action="/thanks/"
+                    action="/thanks/"
                     data-netlify="true"
                     data-netlify-honeypot="bot-field"
                     onSubmit={this.handleSubmit}
