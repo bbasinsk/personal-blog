@@ -42,7 +42,7 @@ Nivo is a React component library that focuses on data visualizations. Really pr
 
 Data is taken into this plot as an array of x and y points as shown. You can even pass in dates.
 
-```{json}
+```json
 Array<{
     id: {string|number}
     data: Array<{
