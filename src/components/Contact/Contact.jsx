@@ -1,5 +1,8 @@
 import React from "react";
+import TextField from '@material-ui/core/TextField';
 import { navigateTo } from "gatsby-link";
+
+import "./Contact.css";
 
 function encode(data) {
     return Object.keys(data)
@@ -52,22 +55,39 @@ export default class Contact extends React.Component {
                         </label>
                     </p>
                     <p>
-                        <label>
-                            Your name:<br />
-                            <input type="text" name="name" onChange={this.handleChange} />
-                        </label>
+                        <TextField
+                            id="outlined-name"
+                            label="Name"
+                            value={this.state.name}
+                            onChange={this.handleChange}
+                            margin="normal"
+                            name="name"
+                            type="text"
+                            variant="outlined"
+                        />
                     </p>
                     <p>
-                        <label>
-                            Your email:<br />
-                            <input type="email" name="email" onChange={this.handleChange} />
-                        </label>
+                        <TextField
+                            id="outlined-email-input"
+                            label="Email"
+                            onChange={this.handleChange}
+                            type="email"
+                            name="email"
+                            autoComplete="email"
+                            margin="normal"
+                            variant="outlined"
+                        />
                     </p>
                     <p>
-                        <label>
-                            Message:<br />
-                            <textarea name="message" onChange={this.handleChange} />
-                        </label>
+                        <TextField
+                            id="outlined-textarea"
+                            label="Message"
+                            name="message"
+                            onChange={this.handleChange}
+                            multiline
+                            // margin="normal"
+                            variant="outlined"
+                        />
                     </p>
                     <p>
                         <button type="submit">Send</button>
