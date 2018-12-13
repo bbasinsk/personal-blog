@@ -1,0 +1,9 @@
+/** empty css file for component consistency **/
+
+.contact {
+    max-width: 710px;
+    width: 80%;
+    margin: auto;
+    height: 100vh;
+    padding-top: 35px;
+}

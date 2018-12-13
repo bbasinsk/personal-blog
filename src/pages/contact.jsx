@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import Helmet from "react-helmet";
-import About from "../components/About/About";
-import config from "../../data/SiteConfig";
-
+import Contact from "../components/Contact/Contact";
 import Drawer from "../components/Drawer/Drawer";
 import Navigation from "../components/Navigation/Navigation";
 import SiteWrapper from "../components/SiteWrapper/SiteWrapper";
@@ -11,6 +9,7 @@ import BlogLogo from "../components/BlogLogo/BlogLogo";
 import MenuButton from "../components/MenuButton/MenuButton";
 import Footer from "../components/Footer/Footer";
 import Layout from "../components/layout";
+import config from "../../data/SiteConfig";
 
 class ContactPage extends Component {
   state = {
@@ -43,13 +42,13 @@ class ContactPage extends Component {
     return (
       <Layout location={this.props.location}>
         <Drawer isOpen={this.state.menuOpen}>
-          <Helmet title={`About | ${config.siteTitle}`} />
+          <Helmet title={`Contact | ${config.siteTitle}`} />
 
           {/* The blog navigation links */}
           <Navigation config={config} onClose={this.handleOnClose} />
           <SiteWrapper>
             {/* All the main content gets inserted here */}
-            <div className="about-page">
+            <div className="contact-page">
               {/* The big featured header */}
               <MainNav>
                 <BlogLogo logo={config.siteLogo} title={config.siteTitle} />
@@ -58,7 +57,7 @@ class ContactPage extends Component {
                   onClick={this.handleOnClick}
                 />
               </MainNav>
-              <About />
+              <Contact />
             </div>
             {/* The tiny footer at the very bottom */}
             <Footer
