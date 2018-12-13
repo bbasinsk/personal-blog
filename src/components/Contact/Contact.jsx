@@ -96,10 +96,9 @@ export default class Contact extends React.Component {
                             variant="outlined"
                         />
                         <br />
-                        <br />
-                        <Button color="primary" variant="contained" type="submit">
+                        <Button variant="outlined" type="submit" style={{ marginTop: '16px' }}>
                             Send
-                    </Button>
+                        </Button>
                     </form>
                 </div>
             </MuiThemeProvider>
