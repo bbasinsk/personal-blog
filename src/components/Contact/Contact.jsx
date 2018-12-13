@@ -1,6 +1,10 @@
 import React from "react";
 import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
 import { navigateTo } from "gatsby-link";
+
+import { MuiThemeProvider } from '@material-ui/core/styles';
+import theme from '../theme';
 
 import "./Contact.css";
 
@@ -37,27 +41,29 @@ export default class Contact extends React.Component {
 
     render() {
         return (
-            <div>
-                <form
-                    name="contact"
-                    method="post"
-                    action="/thanks/"
-                    data-netlify="true"
-                    data-netlify-honeypot="bot-field"
-                    onSubmit={this.handleSubmit}
-                >
-                    {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
-                    <input type="hidden" name="form-name" value="contact" />
-                    <p hidden>
-                        <label>
-                            Don’t fill this out:{" "}
-                            <input name="bot-field" onChange={this.handleChange} />
-                        </label>
-                    </p>
-                    <p>
+            <MuiThemeProvider theme={theme}>
+                <div>
+                    <form
+                        className="contact-form"
+                        name="contact"
+                        method="post"
+                        action="/thanks/"
+                        data-netlify="true"
+                        data-netlify-honeypot="bot-field"
+                        onSubmit={this.handleSubmit}
+                    >
+                        {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
+                        <input type="hidden" name="form-name" value="contact" />
+                        <p hidden>
+                            <label>
+                                Don’t fill this out:{" "}
+                                <input name="bot-field" onChange={this.handleChange} />
+                            </label>
+                        </p>
                         <TextField
                             id="outlined-name"
                             label="Name"
+                            fullWidth
                             value={this.state.name}
                             onChange={this.handleChange}
                             margin="normal"
@@ -65,10 +71,10 @@ export default class Contact extends React.Component {
                             type="text"
                             variant="outlined"
                         />
-                    </p>
-                    <p>
+                        <br />
                         <TextField
                             id="outlined-email-input"
+                            fullWidth
                             label="Email"
                             onChange={this.handleChange}
                             type="email"
@@ -77,23 +83,26 @@ export default class Contact extends React.Component {
                             margin="normal"
                             variant="outlined"
                         />
-                    </p>
-                    <p>
+                        <br />
                         <TextField
                             id="outlined-textarea"
                             label="Message"
+                            fullWidth
                             name="message"
                             onChange={this.handleChange}
+                            margin="normal"
                             multiline
-                            // margin="normal"
+                            rows="8"
                             variant="outlined"
                         />
-                    </p>
-                    <p>
-                        <button type="submit">Send</button>
-                    </p>
-                </form>
-            </div>
+                        <br />
+                        <br />
+                        <Button color="primary" variant="contained" type="submit">
+                            Send
+                    </Button>
+                    </form>
+                </div>
+            </MuiThemeProvider>
         );
     }
 }

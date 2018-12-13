@@ -514,7 +514,7 @@ margin on the iframe, cause it breaks stuff. */
     margin: 0;
 }
 
-textarea,
+/* textarea,
 select,
 input:not([type="radio"]):not([type="checkbox"]) {
     width: 260px;
@@ -576,8 +576,8 @@ button {
     text-decoration: none;
     color: #fff;
     font-family: 'Open Sans', sans-serif;
-    font-size: 11px; /* Hacks targeting Firefox. */
-    line-height: 13px; /* Hacks targeting Firefox. */
+    font-size: 11px; Hacks targeting Firefox.
+    line-height: 13px; Hacks targeting Firefox.
     font-weight: 300;
     text-align: center;
     letter-spacing: 1px;
@@ -586,7 +586,7 @@ button {
     border-radius: 0.3rem;
     border: rgba(0, 0, 0, 0.05) 0.1em solid;
     background: #5ba4e5;
-}
+} */
 
 /* ==========================================================================
       Utilities - These things get used a lot

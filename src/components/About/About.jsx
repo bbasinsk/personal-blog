@@ -8,7 +8,7 @@ class About extends Component {
     return (
       <div className="about">
         <h1>
-          Use the form below to get in contact!
+          Get in contact!
         </h1>
         <Contact />
       </div >

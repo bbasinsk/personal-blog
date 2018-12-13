@@ -1,1 +1,8 @@
 /** empty css file for component consistency **/
+
+.about {
+    max-width: 710px;
+    width: 80%;
+    margin: 4rem auto;
+    /* background: black; */
+}
