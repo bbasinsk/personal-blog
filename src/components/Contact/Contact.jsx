@@ -7,7 +7,7 @@ class Contact extends Component {
   render() {
     return (
       <div className="contact">
-        <h1>
+        <h1 style={{ color: '#EEEEEE' }}>
           Get in contact!
         </h1>
         <ContactForm />

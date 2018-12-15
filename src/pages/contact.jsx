@@ -48,7 +48,7 @@ class ContactPage extends Component {
           <Navigation config={config} onClose={this.handleOnClose} />
           <SiteWrapper>
             {/* All the main content gets inserted here */}
-            <div className="contact-page">
+            <div className="contact-page" style={{ background: '#212121' }}>
               {/* The big featured header */}
               <MainNav>
                 <BlogLogo logo={config.siteLogo} title={config.siteTitle} />
