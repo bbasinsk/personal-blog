@@ -6,6 +6,7 @@ date: "2018-12-09"
 category: "tech"
 tags:
     - react
+    - frontend
 ---
 
 # Component Libraries
