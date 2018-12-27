@@ -19,7 +19,7 @@ To give you a more solid idea of what I’m talking about, here are three exampl
 
 ### 1. Writing
 
-For this blog, for example, my goal was to develop a satisfying process of writing and publishing my ideas. I knew that the most difficult part would be finding a process for writing that I enjoy. I found that writing in markdown (TODO: link) was helpful so that I didn’t have to worry about formatting. I also found that using a writing program such as Ulysses makes the experience of writing and publish much easier than trying to write and publish in a program like Microsoft Word. I also love that it syncs with my phone so that I can write down quick ideas and make edits on the go.
+For this blog, for example, my goal was to develop a satisfying process of writing and publishing my ideas. I knew that the most difficult part would be finding a process for writing that I enjoy. I found that writing in [markdown](https://en.wikipedia.org/wiki/Markdown) was helpful so that I didn’t have to worry about formatting. I also found that using a writing program such as Ulysses makes the experience of writing and publish much easier than trying to write and publish in a program like Microsoft Word. I also love that it syncs with my phone so that I can write down quick ideas and make edits on the go.
 
 I can then export each post as markdown and paste it into the website. I also spent a bit of time making the process of publishing the post easier (although I still have ideas on how to improve it). I use Netify to host my site for free. It offers continuous deployment with GitHub so all I have to do is commit the new post and push it to GitHub and changes become public within about 45 seconds. This process has been surprisingly easy and more importantly, rewarding.
 
