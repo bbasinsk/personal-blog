@@ -68,7 +68,7 @@
   "license": "MIT",
   "main": "n/a",
   "scripts": {
-    "develop": "rm -rf .cache && gatsby develop",
+    "dev": "rm -rf .cache && gatsby develop",
     "serve": "gatsby serve",
     "build": "gatsby build",
     "build:pp": "gatsby build --prefix-paths",
